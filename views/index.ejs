@@ -1,0 +1,56 @@
+<% include _header %>
+
+<!-- Main -->
+<main>
+    <div class="margen-index">&nbsp</div>
+    <div class="container-fluid text-light text-center p-5 mt-5 index-contain">
+        <div class="row title">
+            <div class="col p-5 mediaquery-1">
+                El mejor software para gestionar competiciones deportivas
+            </div>
+        </div>
+        <div class="row w-75 p-5">
+            <div class="col text-warning h2 p-3 mediaquery-2">
+                Con ManaSport podrás organizar tus competiciones deportivas al más alto nivel, 
+                como particular, pabellón deportivo, Ayuntamientos, CEIP, etc. 
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <a href="/player">
+                        <input type="button" value="JUGADORES" class="btn btn-danger">
+                    </a>
+                </div>
+    
+                <div class="col">
+                        <a href="/team">
+                            <input type="button" value="EQUIPOS" class="btn btn-danger">
+                        </a>
+                    </div>
+    
+            </div>
+        </div>
+    
+
+    <div class="container-fluid newsletter">
+            <h1>SUSCRÍBETE A NUESTRA NEWSLETTER</h1>
+            <h3>Entérate de todas las novedades, próximos proyectos...  ¿te lo vas a perder?</h3>
+            <form id="form_newsletter" method="post">
+                <input id="emailForm" maxlength="256" name="emailForm" type="text" placeholder="Tu email">
+                <input type="submit" value="Enviar">
+            </form>
+    </div>
+
+
+    <div class="flotantes">
+            <img src="images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
+        </div>
+</main>
+
+
+
+<% include _footer %>

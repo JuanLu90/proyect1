@@ -1,0 +1,36 @@
+/* -------- Modal -------- */
+.modal .modal-register{
+    width: 500px;
+}
+
+.modal .modal-login{
+    width: 300px;
+    margin-left: 100px;
+}
+
+.modal input[type="password"]{
+    width: 100%;
+}
+
+.modal input{
+    margin: 5px 0;
+}
+
+.modal img{
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.modal label{
+    margin-left: 5px;
+    margin-bottom: -30px;
+}
+
+.modal .modal-register h5{
+    margin-left: 195px;
+}
+
+.modal .modal-login h5{
+    margin-left: 110px;
+}

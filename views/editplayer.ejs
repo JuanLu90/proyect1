@@ -1,0 +1,92 @@
+<% include _header %>
+
+<!-- Main -->
+<main>
+<div class="margen-player">&nbsp</div>
+<div class="container edit-contain">
+    <div class="row bg-light">
+        <div class="col">Editar Jugador</div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <form action="/player/update/<%= data.PlayerId %>" method="POST" class="bg-dark p-3">
+                <div class="row">
+                    <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning w-25">Nombre:</label>
+                                <input type="text" value="<%= data.name %>" name="name" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group d-inline-block">
+                            <label class="text-warning" >Apellidos:</label>
+                            <input type="text" value="<%= data.surname %>" name="surname" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group d-inline-block">
+                            <label class="text-warning">Edad:</label>
+                            <input type="text" value="<%= data.age %>" name="age"class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group d-inline-block">
+                            <label class="text-warning">Goles:</label>
+                            <input type="text" value="<%= data.goals %>" name="goals" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-groupd-inline-block">
+                            <label class="text-warning">Posición:</label>
+                            <input type="text" value="<%= data.position %>" name="position" id="position" class="form-control" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-4">
+                    <div class="col">
+                        <div class="form-group w-100 d-inline-block">
+                            <input type="submit" value="Enviar" class="btn btn-info mb-1 w-100">
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <div class="col-5 position-relative position-image">
+                <img src="/images/football-goal-keeper.png" style="top:45%; left:6%;" alt="1">
+                <img src="/images/football-player.png" style="top:8%; left:26%;" alt="2">
+                <img src="/images/football-player.png" style="top:30%; left:18%;" alt="3">
+                <img src="/images/football-player.png" style="top:60%; left:18%;" alt="4">
+                <img src="/images/football-player.png" style="top:83%; left:26%;" alt="5">
+                <img src="/images/football-player.png" style="top:23%; left:50%;" alt="6">
+                <img src="/images/football-player.png" style="top:45%; left:35%;" alt="7">
+                <img src="/images/football-player.png" style="top:65%; left:50%;" alt="8">
+                <img src="/images/football-player.png" style="top:8%; left:70%;" alt="9">
+                <img src="/images/football-player.png" style="top:83%; left:70%;" alt="10">
+                <img src="/images/football-player.png" style="top:45%; left:77%;" alt="11">
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col text-center">
+                <a href="/player" class="btn btn-danger w-50">Volver</a>
+            </div>
+        </div>
+    </div>
+
+     
+<div class="flotantes">
+        <img src="/images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
+    </div>
+
+
+</main>
+
+
+<% include _footer %>

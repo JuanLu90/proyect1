@@ -1,0 +1,55 @@
+<% include _header %>
+
+<!-- Main -->
+<main>
+<div class="margen-player">&nbsp</div>
+<div class="container edit-contain">
+    <div class="row bg-light">
+        <div class="col">Editar Equipo</div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <form action="/team/update/<%= data.TeamId %>" method="POST" class="bg-dark p-3">
+                <div class="row">
+                    <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning w-25">Nombre:</label>
+                                <input type="text" value="<%= data.name %>" name="name" class="form-control">
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                </div>
+                <div class="row pt-4">
+                    <div class="col">
+                        <div class="form-group w-100 d-inline-block">
+                            <input type="submit" value="Enviar" class="btn btn-info mb-1 w-100">
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col text-center">
+                <a href="/team" class="btn btn-danger w-50">Volver</a>
+            </div>
+        </div>
+    </div>
+
+     
+<div class="flotantes">
+        <img src="/images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
+    </div>
+
+
+</main>
+
+
+<% include _footer %>

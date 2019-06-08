@@ -1,0 +1,106 @@
+<% include _header %>
+
+<!----- Main ----->
+<main>
+    <div class="margen-player">&nbsp</div>
+    <div class="container edit-contain">
+        <div class="row bg-light">
+            <div class="col">
+                Listado Equipos
+            </div>
+            <div class="col text-right">
+                    <a href="/player"> <input type="button" value="JUGADORES" class="btn btn-danger text-right"> </a>
+             </div>
+        </div>
+    </div>
+    <div class="container bg-dark">
+            <form action="/team/add" method="POST" class="bg-dark">
+            <div class="row">
+                <div class="col">
+                    
+                    <div class="form-group d-inline-block">
+                        <label class="text-warning pt-2">Equipo:</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group w-100 d-inline-block">
+                            <input type="text" name="name" placeholder="Nombre equipo" class="form-control">
+                    </div>
+                   
+                </div>
+                <div class="col-2"> 
+                    <input type="submit" value="Enviar" class="btn btn-info">
+                </div>
+            </div>
+            </form>
+        </div>
+    
+        <!-- <div class="row bg-warning">
+            <div class="col">
+                <form action='/upload' method="POST" enctype="multipart/form-data">
+                    <input type="file" id="file" name="file" onchange="readURL(this);">
+                    <input type="submit" value="Subir">
+                </form>
+            </div>     
+        </div> 
+        <div class="row">
+            <div class="col">
+                <img id="blah" src="#"/>
+            </div>
+        </div> -->
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col"><a href="/team">IdEquipo</a></th>
+                            <!-- <th scope="col">Avatar</th> -->
+                            <th scope="col"><a href="/team/orderbyname"> Equipo</a></th>
+                            <th scope="col"><a href="/team/orderbyplayernum"> Número Jugadores</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%
+                        if (data){
+                            for (let i = 0; i < data.length; i++){ 
+                        %>                    
+                        <tr>
+                            <td scope="row"><%= data[i].TeamId %></td>
+                            <!-- <td scope="row"> <img src="<%= data[i].image %>" width="30" height="30"> </td> -->
+                            <td><%= data[i].name %></td>
+                            <td><%= data[i].surname %></td>
+                            <td class="link">
+                                <a href="/team/delete/<%=data[i].TeamId%>">
+                                    <img src="/images/close.png" width="25">
+                                </a>
+                            </td>
+                            <td class="link">
+                                <a href="/team/update/<%=data[i].TeamId%>">
+                                    <img src="/images/refresh.png" width="25">
+                                </a>
+                            </td>
+                        <%
+                            }} 
+                        %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+ 
+<div class="flotantes">
+    <img src="images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
+</div>
+
+
+</main>
+
+
+
+<% include _footer %>

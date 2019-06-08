@@ -1,0 +1,49 @@
+/* ------- HEADER ------- */
+header{
+    background-color: rgba(36, 36, 36, 0.95);
+}
+
+.header-logo img{
+    width: 530px;
+}
+
+.login-panel input{
+    width: 100%;
+}
+
+.login-panel input[type="text"], input[type="password"]{
+    width: 49%;
+    display: inline-block;
+}
+
+.login-panel input[value="REGISTER"]{
+    width: 59%;
+}
+
+
+
+@media screen and (max-width: 930px){
+    .header-logo{
+       
+    }
+
+    .header-logo img{
+        width: 420px;
+    }
+
+    .m-3 {
+        margin-left: 3rem!important;
+    }
+
+    .login-panel input{
+        margin-top: 0px !important;
+    }
+}
+
+
+@media screen and (max-width: 750px){
+
+    .m-3 {
+        margin-left:0rem!important;
+    }
+}

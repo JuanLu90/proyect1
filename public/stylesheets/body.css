@@ -1,0 +1,45 @@
+/* ------- BODY ------- */
+body{
+    background-image: url('/images/fondo2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* ScrollBar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+background: #252525; 
+}
+
+::-webkit-scrollbar-thumb {
+background: #E0A800; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #BB8C00; 
+}
+
+
+/* RRSS */
+.rrss{
+    position: fixed;
+    top: 40%;
+    width: 30px;
+}
+
+.rrss img{
+    width: 40px;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.rrss img:hover{
+    transform: translate(20px)
+}
+
+  
