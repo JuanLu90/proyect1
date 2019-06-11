@@ -1,6 +1,7 @@
 /* ------- MAIN ------- */
 main{
     opacity: 0.96;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .margen-index{
@@ -40,7 +41,7 @@ main{
 
 .index-contain{
     font-size: 3em;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 160px !important;
 }
 
 .edit-contain .row{
@@ -121,8 +122,8 @@ main{
         margin-top: 150px;
     }
 
-    .p-5 {
-        padding: 2rem!important;
+    .index-contain{
+        padding-top: 130px;
     }
 
     .mediaquery-1{
@@ -137,8 +138,8 @@ main{
 
 
   @media screen and (max-width: 1550px){
-     .p-5 {
-        padding: 1.3rem!important;
+    .index-contain{
+        padding-top: 100px;
     }
 
     .mediaquery-1{
@@ -154,11 +155,11 @@ main{
 
   @media screen and (max-width: 1335px){
     .margen-index{
-        margin-top: 100px;
+        margin-top: 70px;
     }
 
-    .p-5 {
-        padding: 1.1rem!important;
+    .index-contain{
+        padding-top: 160px;
     }
 
     .mediaquery-1{

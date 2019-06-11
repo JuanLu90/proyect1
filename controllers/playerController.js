@@ -111,5 +111,15 @@ playerController.orderByPosition = (req, res) => {
 };
 
 
+playerController.orderByTeam = (req, res) => {
+    req.getConnection((err, conn) => {
+        conn.query('SELECT * FROM player ORDER BY TeamId;', (err, manasport) => {
+            res.render('player', {
+                data:manasport
+            });
+        });
+    });
+};
+
 
 module.exports = playerController;

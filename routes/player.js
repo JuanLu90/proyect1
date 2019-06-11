@@ -16,6 +16,7 @@ router.get('/orderbyname', playerController.orderByName);
 router.get('/orderbysurname', playerController.orderBySurname);
 router.get('/orderbyage', playerController.orderByAge);
 router.get('/orderbyposition', playerController.orderByPosition);
+router.get('/orderbyteam', playerController.orderByTeam);
 
 
 

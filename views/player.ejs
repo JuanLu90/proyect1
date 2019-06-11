@@ -30,9 +30,15 @@
                             <input type="text" name="surname" placeholder="Apellidos" class="form-control">
                         </div>
                     </div>
+                    <div class="col-4">
+                        <div class="form-group d-inline-block">
+                            <label class="text-warning" >TeamId:</label>
+                            <input type="text" name="teamid" placeholder="TeamId" class="form-control">
+                        </div>
+                    </div>
                     <!-- <div class="col-4">
                         <div class="form-group d-inline-block">
-                            <label class="text-warning" >Equipo:</label> 
+                            <label class="text-warning" >Equipo:</label>
                             <select class="form-control">
                                 <option value=1>Barcelona</option>
                                 <option value=2>Real Madrid</option>
@@ -119,7 +125,7 @@
                             <th scope="col"><a href="/player/orderbyage"> Edad </a></th>
                             <th scope="col"><a href="/player/orderbyposition"> Posición</a></th>
                             <th scope="col"><a href="/player/orderbygoals"> Goles</a></th>
-                            <!-- <th scope="col"><a href="/player/orderbyteam"> Equipo </a></th> -->
+                            <th scope="col"><a href="/player/orderbyteam"> TeamId </a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -135,7 +141,7 @@
                             <td><%= data[i].age + " años" %></td>
                             <td><%= data[i].position %></td>
                             <td><%= data[i].goals %></td>
-                            <td><%= data[i].teamId %> </td>                             
+                            <td><%= data[i].TeamId %> </td>                             
                             <td class="link">
                                 <a href="/player/delete/<%=data[i].PlayerId%>">
                                     <img src="/images/close.png" width="25">
@@ -158,7 +164,7 @@
 
  
 <div class="flotantes">
-    <img src="images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
+    <img src="/images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
 </div>
 
 
