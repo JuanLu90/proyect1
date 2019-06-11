@@ -1,11 +1,54 @@
 /* -------- Modal -------- */
-.modal .modal-register{
-    width: 500px;
+
+
+/* --- Modal Login --- */
+.modal .modal-login{
+    margin: auto;
+    width: 400px;
+    background-color: #222f3e;
+    border: 2px solid #FFC107;
+    opacity: 0.95;
 }
 
-.modal .modal-login{
-    width: 300px;
-    margin-left: 100px;
+.modal .modal-login .modal-header, 
+.modal .modal-login .modal-footer{
+    border: none;
+}
+
+.modal .modal-login .modal-body input[type="text"]{
+    background-image:url('/images/profile-login.png');
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:left top;  
+    padding-left: 30px;
+    
+}
+
+.modal .modal-login .modal-body input[type="password"]{
+    background-image:url('/images/lock.png');
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:left top;  
+    padding-left: 30px;
+}
+
+.modal .modal-login ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.modal .modal-login .close{
+    color: white;
+}
+
+.modal img{
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.modal .modal-login .modal-title{
+    padding-left: 20px;
 }
 
 .modal input[type="password"]{
@@ -16,10 +59,17 @@
     margin: 5px 0;
 }
 
-.modal img{
-    width: 100%;
-    margin: 5px 0;
-    cursor: pointer;
+.modal-footer a{
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+
+
+/* --- Modal Register --- */
+.modal .modal-register{
+    width: 500px;
 }
 
 .modal label{
@@ -27,10 +77,65 @@
     margin-bottom: -30px;
 }
 
-.modal .modal-register h5{
-    margin-left: 195px;
+.modal .modal-register{
+    margin: auto;
+    width: 400px;
+    background-color: #222f3e;
+    border: 2px solid #FFC107;
+    opacity: 0.95;
 }
 
-.modal .modal-login h5{
-    margin-left: 110px;
+.modal .modal-register .modal-header, 
+.modal .modal-register .modal-footer{
+    border: none;
+}
+
+.modal .modal-register .modal-body input[type="text"]{
+    background-image:url('/images/profile-login.png');
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:left top;  
+    padding-left: 30px;
+    
+}
+
+.modal .modal-register .modal-body input[type="password"]{
+    background-image:url('/images/lock.png');
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:left top;  
+    padding-left: 30px;
+}
+
+.modal .modal-register ::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.modal .modal-register .close{
+    color: white;
+}
+
+.modal img{
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.modal .modal-register .modal-title{
+    padding-left: 20px;
+}
+
+.modal input[type="password"]{
+    width: 100%;
+}
+
+.modal input{
+    margin: 5px 0;
+}
+
+.modal-footer a{
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
 }
