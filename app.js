@@ -2,13 +2,14 @@ var createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
-const mysql = require('mysql');
-const myConnection = require('express-myconnection');
+// const mysql = require('mysql');
+// const myConnection = require('express-myconnection');
 const indexRouter = require('./routes/index');
 const playerRouter = require('./routes/player');
 const teamRouter = require('./routes/team');
 var cookieParser = require('cookie-parser');
 const fileUpload = require('express-fileupload')
+
 
 const app = express();
 
@@ -23,13 +24,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(fileUpload())
 app.use(morgan('dev'));
-app.use(myConnection(mysql, {
-    host: 'localhost',
-    user: 'root',
-    password: '1234',
-    port: 3306,
-    database: 'manasport'
-}, 'single'));
+// app.use(myConnection(mysql, {
+//     host: 'localhost',
+//     user: 'root',
+//     password: '1234',
+//     port: 3306,
+//     database: 'manasport'
+// }, 'single'));
 
 app.use('/', indexRouter);
 app.use('/player', playerRouter);

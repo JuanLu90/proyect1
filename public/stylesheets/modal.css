@@ -15,21 +15,20 @@
     border: none;
 }
 
-.modal .modal-login .modal-body input[type="text"]{
-    background-image:url('/images/profile-login.png');
+.modal .modal-login .modal-body input{
     background-repeat:no-repeat;
     background-size: contain;
     background-position:left top;  
     padding-left: 30px;
-    
+    color: white;
+}
+
+.modal .modal-login .modal-body input[type="text"]{
+    background-image:url('/images/profile-login.png'); 
 }
 
 .modal .modal-login .modal-body input[type="password"]{
     background-image:url('/images/lock.png');
-    background-repeat:no-repeat;
-    background-size: contain;
-    background-position:left top;  
-    padding-left: 30px;
 }
 
 .modal .modal-login ::placeholder {
@@ -90,21 +89,20 @@
     border: none;
 }
 
-.modal .modal-register .modal-body input[type="text"]{
-    background-image:url('/images/profile-login.png');
+.modal .modal-register .modal-body input{
     background-repeat:no-repeat;
     background-size: contain;
     background-position:left top;  
     padding-left: 30px;
-    
+    color: white;
+}
+
+.modal .modal-register .modal-body input[type="text"]{
+    background-image:url('/images/profile-login.png'); 
 }
 
 .modal .modal-register .modal-body input[type="password"]{
     background-image:url('/images/lock.png');
-    background-repeat:no-repeat;
-    background-size: contain;
-    background-position:left top;  
-    padding-left: 30px;
 }
 
 .modal .modal-register ::placeholder {
@@ -138,4 +136,17 @@
     color: white;
     font-size: 0.8em;
     text-decoration: none;
+}
+
+.modal .modal-register .form-check{
+    padding-left: 0;
+}
+
+.modal .modal-register input{
+    margin-top: 7px;
+}
+
+.modal .modal-register label{
+    font-size: 0.8em;
+    margin-left: 20px;
 }

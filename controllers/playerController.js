@@ -1,125 +1,161 @@
+
+const playerModel = require('../models/playerModel');
 const playerController = {};
 
+
 playerController.list = (req, res) => {
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM player', (err, manasport) => {
+    playerModel.list(req, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.list)")
             res.render('player', {
-                data:manasport
+                data:player
             });
+        })
+        .catch(err => {
+            res.send("error playerController.list");
         });
-    });
-};
+}
 
 
-playerController.save = (req, res)=> {
-    const dataForm = req.body;
-    req.getConnection((err, conn)=>{
-        conn.query('INSERT INTO player set ?', [dataForm], (err, manasport) => {
+playerController.save = (req, res) => {;
+    const data = req.body;
+    playerModel.save(data)
+        .then(player => {
+            console.log("ALL OK: (playerController.save)");
             res.redirect('/player');
+        })
+        .catch(err => {
+            res.send("error playerController.save");
         });
-    });
-};
+}
 
 
 playerController.delete = (req, res) => {
     const id = req.params.id;
-    req.getConnection((err, conn) => {
-        conn.query('DELETE FROM player WHERE PlayerId = ?', [id], (err, player) => {
-        res.redirect('/player');
+    playerModel.delete(id)
+        .then(player => {
+            console.log("ALL OK: (playerController.delete)");
+            res.redirect('/player');
+        })
+        .catch(err => {
+            res.send("error playerController.delete");
         });
-    });
-};
+}
 
 
 playerController.edit = (req, res) => {
     const id = req.params.id;
-    req.getConnection((err, conn) => {
-        conn.query ('SELECT * FROM player WHERE PlayerId = ?', [id], (err, player) => {
+    playerModel.edit(id, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.edit)")
             res.render('editplayer', {
                 data:player[0]
             });
+        })
+        .catch(err => {
+            res.send("error playerController.edit");
         });
-    });
-};
+}
 
 
-playerController.update=(req, res)=>{
-    const id=req.params.id;
-    //aqui recibo los nuevos datos
+playerController.update = (req, res) => {
+    const idPlayer = req.params.id;
     const newplayer = req.body;
-    req.getConnection((err, conn) => {
-        conn.query('UPDATE player set ? WHERE PlayerId = ?', [newplayer, id], (err, rows) =>{
-            res.redirect('/player')
+    console.log("entraaaaa")
+    playerModel.update(newplayer, idPlayer)
+        .then(result => {
+            console.log("ALL OK: (playerController.update)");
+            res.redirect('/player');
+        })
+        .catch(err => {
+            res.send("error playerController.update");
         });
-    });
-};
+}
 
 
 playerController.orderByGoals = (req, res) => {
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM player ORDER BY goals DESC;', (err, manasport) => {
+    playerModel.orderByGoals(req, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.orderByGoals)")
             res.render('player', {
-                data:manasport
+                data:player
             });
+        })
+        .catch(err => {
+            res.send("error playerController.orderByGoals");
         });
-    });
-};
+}
 
 
 playerController.orderByName = (req, res) => {
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM player ORDER BY name;', (err, manasport) => {
+    playerModel.orderByName(req, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.orderByName)")
             res.render('player', {
-                data:manasport
+                data:player
             });
+        })
+        .catch(err => {
+            res.send("error playerController.orderByName");
         });
-    });
-};
+}
 
 
 playerController.orderBySurname = (req, res) => {
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM player ORDER BY surname', (err, manasport) => {
+    playerModel.orderBySurname(req, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.orderBySurname)")
             res.render('player', {
-                data:manasport
+                data:player
             });
+        })
+        .catch(err => {
+            res.send("error playerController.orderBySurname");
         });
-    });
-};
-
+}
 
 
 playerController.orderByAge = (req, res) => {
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM player ORDER BY age;', (err, manasport) => {
+    playerModel.orderByAge(req, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.orderByAge)")
             res.render('player', {
-                data:manasport
+                data:player
             });
+        })
+        .catch(err => {
+            res.send("error playerController.orderByAge");
         });
-    });
-};
+}
 
 
 playerController.orderByPosition = (req, res) => {
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM player ORDER BY position;', (err, manasport) => {
+    playerModel.orderByPosition(req, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.orderByPosition)")
             res.render('player', {
-                data:manasport
+                data:player
             });
+        })
+        .catch(err => {
+            res.send("error playerController.orderByPosition");
         });
-    });
-};
+}
 
 
 playerController.orderByTeam = (req, res) => {
-    req.getConnection((err, conn) => {
-        conn.query('SELECT * FROM player ORDER BY TeamId;', (err, manasport) => {
+    playerModel.orderByTeam(req, res)
+        .then(player => {
+            console.log("ALL OK: (playerController.orderByTeam)")
             res.render('player', {
-                data:manasport
+                data:player
             });
+        })
+        .catch(err => {
+            res.send("error playerController.orderByTeam");
         });
-    });
-};
+}
+
 
 
 module.exports = playerController;
