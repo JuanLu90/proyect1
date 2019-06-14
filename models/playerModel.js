@@ -105,6 +105,7 @@ playerModel.orderByGoals = () => {
     })
 };
 
+
 playerModel.orderByName = () => {
     return new Promise((resolve, reject) => {
         // if(!validate(data)) reject("Invalid data")
@@ -120,6 +121,7 @@ playerModel.orderByName = () => {
         );
     })
 };
+
 
 playerModel.orderBySurname = () => {
     return new Promise((resolve, reject) => {
@@ -137,6 +139,7 @@ playerModel.orderBySurname = () => {
     })
 };
 
+
 playerModel.orderByAge = () => {
     return new Promise((resolve, reject) => {
         // if(!validate(data)) reject("Invalid data")
@@ -153,6 +156,7 @@ playerModel.orderByAge = () => {
     })
 };
 
+
 playerModel.orderByPosition = () => {
     return new Promise((resolve, reject) => {
         // if(!validate(data)) reject("Invalid data")
@@ -168,6 +172,7 @@ playerModel.orderByPosition = () => {
         );
     })
 };
+
 
 playerModel.orderByTeam = () => {
     return new Promise((resolve, reject) => {
