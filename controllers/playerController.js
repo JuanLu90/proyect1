@@ -3,74 +3,74 @@ const playerModel = require('../models/playerModel');
 const playerController = {};
 
 
-playerController.list = (req, res) => {
-    playerModel.list(req, res)
-        .then(player => {
-            console.log("ALL OK: (playerController.list)")
-            res.render('player', {
-                data:player
-            });
-        })
-        .catch(err => {
-            res.send("error playerController.list");
-        });
-}
+// playerController.list = (req, res) => {
+//     playerModel.list(req, res)
+//         .then(player => {
+//             console.log("ALL OK: (playerController.list)")
+//             res.render('player', {
+//                 data:player
+//             });
+//         })
+//         .catch(err => {
+//             res.send("error playerController.list");
+//         });
+// }
 
 
-playerController.save = (req, res) => {;
-    const data = req.body;
-    playerModel.save(data)
-        .then(player => {
-            console.log("ALL OK: (playerController.save)");
-            res.redirect('/player');
-        })
-        .catch(err => {
-            res.send("error playerController.save");
-        });
-}
+// playerController.save = (req, res) => {;
+//     const data = req.body;
+//     playerModel.save(data)
+//         .then(player => {
+//             console.log("ALL OK: (playerController.save)");
+//             res.redirect('/player');
+//         })
+//         .catch(err => {
+//             res.send("error playerController.save");
+//         });
+// }
 
 
-playerController.delete = (req, res) => {
-    const id = req.params.id;
-    playerModel.delete(id)
-        .then(player => {
-            console.log("ALL OK: (playerController.delete)");
-            res.redirect('/player');
-        })
-        .catch(err => {
-            res.send("error playerController.delete");
-        });
-}
+// playerController.delete = (req, res) => {
+//     const id = req.params.id;
+//     playerModel.delete(id)
+//         .then(player => {
+//             console.log("ALL OK: (playerController.delete)");
+//             res.redirect('/player');
+//         })
+//         .catch(err => {
+//             res.send("error playerController.delete");
+//         });
+// }
 
 
-playerController.edit = (req, res) => {
-    const id = req.params.id;
-    playerModel.edit(id, res)
-        .then(player => {
-            console.log("ALL OK: (playerController.edit)")
-            res.render('editplayer', {
-                data:player[0]
-            });
-        })
-        .catch(err => {
-            res.send("error playerController.edit");
-        });
-}
+// playerController.edit = (req, res) => {
+//     const id = req.params.id;
+//     playerModel.edit(id, res)
+//         .then(player => {
+//             console.log("ALL OK: (playerController.edit)")
+//             res.render('editplayer', {
+//                 data:player[0]
+//             });
+//         })
+//         .catch(err => {
+//             res.send("error playerController.edit");
+//         });
+// }
 
 
-playerController.update = (req, res) => {
-    const idPlayer = req.params.id;
-    const newplayer = req.body;
-    console.log("entraaaaa")
-    playerModel.update(newplayer, idPlayer)
-        .then(result => {
-            console.log("ALL OK: (playerController.update)");
-            res.redirect('/player');
-        })
-        .catch(err => {
-            res.send("error playerController.update");
-        });
-}
+// playerController.update = (req, res) => {
+//     const idPlayer = req.params.id;
+//     const newplayer = req.body;
+//     console.log("entraaaaa")
+//     playerModel.update(newplayer, idPlayer)
+//         .then(result => {
+//             console.log("ALL OK: (playerController.update)");
+//             res.redirect('/player');
+//         })
+//         .catch(err => {
+//             res.send("error playerController.update");
+//         });
+// }
 
 
 playerController.orderByGoals = (req, res) => {

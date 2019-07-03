@@ -47,10 +47,10 @@
         
 <!-- Social Media -->
     <div class="rrss">
-        <img src="/images/facebook.png" alt="">
-        <img src="/images/twitter.png" alt="">
-        <img src="/images/instagram.png" alt="">
-        <img src="/images/whatsapp.png" alt="">
+        <img src="/images/rrss/facebook.png" alt="">
+        <img src="/images/rrss/twitter.png" alt="">
+        <img src="/images/rrss/instagram.png" alt="">
+        <img src="/images/rrss/whatsapp.png" alt="">
     </div>
 </header>
 <!-- <div class="separar-header"></div> -->
@@ -70,19 +70,19 @@
                 <form>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control bg-warning border border-warning" placeholder="Email">
+                            <input type="text" class="form-control bg-warning border border-warning" name="emaillogin" id="emaillogin" placeholder="Email">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <input type="password" class="form-control bg-warning border border-warning" placeholder="***********">
+                            <input type="password" class="form-control bg-warning border border-warning"  name="passwordlogin" id="passwordlogin" placeholder="***********">
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer no-border">
                 <div class="col-6"> 
-                    <button type="button" class="btn btn-outline-info w-100">Iniciar sesión</button>
+                    <button type="button" class="btn btn-outline-info w-100" onclick="getToken()">Iniciar sesión</button>
                 </div>
                 <div class="col-6">
                     <a href="#">¿Olvidaste la contraseña?</a> 
@@ -144,3 +144,25 @@
         </div>
     </div>
 </div>
+
+<script>
+    function getToken() {
+      const emailValue = document.getElementById("emaillogin").value;
+      const passwordValue = document.getElementById("passwordlogin").value;
+
+      fetch("api/auth", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email: emailValue, password: passwordValue })
+      }).then(response => {
+        if (response.ok) {
+          response.text().then(text => {
+            sessionStorage.setItem("token", text);
+            // location.href = "/users";
+          });
+        }
+      });
+    }
+  </script>

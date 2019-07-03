@@ -24,11 +24,11 @@
 }
 
 .modal .modal-login .modal-body input[type="text"]{
-    background-image:url('/images/profile-login.png'); 
+    background-image:url('/images/form/profile-login.png'); 
 }
 
 .modal .modal-login .modal-body input[type="password"]{
-    background-image:url('/images/lock.png');
+    background-image:url('/images/form/lock.png');
 }
 
 .modal .modal-login ::placeholder {
@@ -98,11 +98,11 @@
 }
 
 .modal .modal-register .modal-body input[type="text"]{
-    background-image:url('/images/profile-login.png'); 
+    background-image:url('/images/form/profile-login.png'); 
 }
 
 .modal .modal-register .modal-body input[type="password"]{
-    background-image:url('/images/lock.png');
+    background-image:url('/images/form/lock.png');
 }
 
 .modal .modal-register ::placeholder {

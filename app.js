@@ -5,6 +5,7 @@ const morgan = require('morgan');
 // const mysql = require('mysql');
 // const myConnection = require('express-myconnection');
 const indexRouter = require('./routes/index');
+var apiRouter = require('./routes/apiRoute');
 const playerRouter = require('./routes/player');
 const teamRouter = require('./routes/team');
 var cookieParser = require('cookie-parser');
@@ -33,7 +34,8 @@ app.use(morgan('dev'));
 // }, 'single'));
 
 app.use('/', indexRouter);
-app.use('/player', playerRouter);
+app.use('/api', apiRouter);
+// app.use('/player', playerRouter);
 app.use('/team', teamRouter);
 
 app.post('/upload',(req,res) => {

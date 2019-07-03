@@ -6,37 +6,37 @@
     <div class="container edit-contain">
         <div class="row bg-light">
             <div class="col">
-                Listado Jugadores 
+                Listado Jugadores
             </div>
             <div class="col text-right">
-                   <a href="/team"> <input type="button" value="EQUIPOS" class="btn btn-danger text-right"> </a>
+                <a href="/team"> <input type="button" value="EQUIPOS" class="btn btn-danger text-right"> </a>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-7">
-                <form action="/player/add" method="POST" class="bg-dark p-3">
-                <div class="row">
-                    <div class="col-4">
+                <form method="POST" class="bg-dark p-3">
+                    <div class="row">
+                        <div class="col-4">
                             <div class="form-group d-inline-block">
                                 <label class="text-warning w-25">Nombre:</label>
-                                <input type="text" name="name" placeholder="Nombre" class="form-control">
+                                <input type="text" name="name" placeholder="Nombre" id="name" class="form-control">
                             </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning" >Apellidos:</label>
-                            <input type="text" name="surname" placeholder="Apellidos" class="form-control">
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning" >TeamId:</label>
-                            <input type="text" name="teamid" placeholder="TeamId" class="form-control">
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">Apellidos:</label>
+                                <input type="text" name="surname" placeholder="Apellidos" id="surname" class="form-control">
+                            </div>
                         </div>
-                    </div>
-                    <!-- <div class="col-4">
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">TeamId:</label>
+                                <input type="text" name="teamid" placeholder="TeamId" id="teamid" class="form-control">
+                            </div>
+                        </div>
+                        <!-- <div class="col-4">
                         <div class="form-group d-inline-block">
                             <label class="text-warning" >Equipo:</label>
                             <select class="form-control">
@@ -48,54 +48,56 @@
                             </select>
                         </div>
                     </div> -->
-                    <!-- <div class="col-4">
+                        <!-- <div class="col-4">
                         <div class="form-group d-inline-block">
                             <label class="text-warning" >Imagen:</label>
                             <input type="text" name="image" id="image" placeholder="Nombre Imagen..." class="form-control" readonly>
                         </div>
                     </div> -->
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning">Edad:</label>
-                            <input type="text" name="age" placeholder="Edad" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">Edad:</label>
+                                <input type="text" name="age" placeholder="Edad" id="age" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">Goles:</label>
+                                <input type="text" name="goals" placeholder="Goles" id="goals" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-groupd-inline-block">
+                                <label class="text-warning">Posición:</label>
+                                <input type="text" name="position" id="position" id="position" placeholder="Posición"
+                                    class="form-control" readonly>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning">Goles:</label>
-                            <input type="text" name="goals" placeholder="Goles" class="form-control">
+                    <div class="row pt-4">
+                        <div class="col">
+                            <div class="form-group w-100 d-inline-block">
+                                <input type="button" value="Enviar" class="btn btn-info mb-1 w-100"
+                                    onclick="sendInfo()">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="form-groupd-inline-block">
-                            <label class="text-warning">Posición:</label>
-                            <input type="text" name="position" id="position" placeholder="Posición" class="form-control" readonly>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pt-4">
-                    <div class="col">
-                        <div class="form-group w-100 d-inline-block">
-                            <input type="submit" value="Enviar" class="btn btn-info mb-1 w-100">
-                        </div>
-                    </div>
-                </div>
                 </form>
             </div>
             <div class="col-5 position-relative position-image">
-                <img src="/images/football-goal-keeper.png" style="top:45%; left:6%;" alt="1">
-                <img src="/images/football-player.png" style="top:8%; left:26%;" alt="2">
-                <img src="/images/football-player.png" style="top:30%; left:18%;" alt="3">
-                <img src="/images/football-player.png" style="top:60%; left:18%;" alt="4">
-                <img src="/images/football-player.png" style="top:83%; left:26%;" alt="5">
-                <img src="/images/football-player.png" style="top:23%; left:50%;" alt="6">
-                <img src="/images/football-player.png" style="top:45%; left:35%;" alt="7">
-                <img src="/images/football-player.png" style="top:65%; left:50%;" alt="8">
-                <img src="/images/football-player.png" style="top:8%; left:70%;" alt="9">
-                <img src="/images/football-player.png" style="top:83%; left:70%;" alt="10">
-                <img src="/images/football-player.png" style="top:45%; left:77%;" alt="11">
+                <img src="/images/other/football-goal-keeper.png" style="top:45%; left:6%;" alt="1">
+                <img src="/images/other/football-player.png" style="top:8%; left:26%;" alt="2">
+                <img src="/images/other/football-player.png" style="top:30%; left:18%;" alt="3">
+                <img src="/images/other/football-player.png" style="top:60%; left:18%;" alt="4">
+                <img src="/images/other/football-player.png" style="top:83%; left:26%;" alt="5">
+                <img src="/images/other/football-player.png" style="top:23%; left:50%;" alt="6">
+                <img src="/images/other/football-player.png" style="top:45%; left:35%;" alt="7">
+                <img src="/images/other/football-player.png" style="top:65%; left:50%;" alt="8">
+                <img src="/images/other/football-player.png" style="top:8%; left:70%;" alt="9">
+                <img src="/images/other/football-player.png" style="top:83%; left:70%;" alt="10">
+                <img src="/images/other/football-player.png" style="top:45%; left:77%;" alt="11">
             </div>
         </div>
         <!-- <div class="row bg-warning">
@@ -128,48 +130,160 @@
                             <th scope="col"><a href="/player/orderbyteam"> TeamId </a></th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <%
-                        if (data){
-                            for (let i = 0; i < data.length; i++){ 
-                        %>                    
-                        <tr>
-                            <td scope="row"><%= data[i].PlayerId %></td>
-                            <!-- <td scope="row"> <img src="<%= data[i].image %>" width="30" height="30"> </td> -->
-                            <td><%= data[i].name %></td>
-                            <td><%= data[i].surname %></td>
-                            <td><%= data[i].age + " años" %></td>
-                            <td><%= data[i].position %></td>
-                            <td><%= data[i].goals %></td>
-                            <td><%= data[i].TeamId %> </td>                             
-                            <td class="link">
-                                <a href="/player/delete/<%=data[i].PlayerId%>">
-                                    <img src="/images/close.png" width="25">
-                                </a>
-                            </td>
-                            <td class="link">
-                                <a href="/player/update/<%=data[i].PlayerId%>">
-                                    <img src="/images/refresh.png" width="25">
-                                </a>
-                            </td>
-                        <%
-                            }} 
-                        %>
-                    </tbody>
+                    <tbody id="table"></tbody>
                 </table>
             </div>
         </div>
     </div>
 
 
- 
-<div class="flotantes">
-    <img src="/images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
-</div>
+
+    <div class="flotantes">
+        <img src="/images/other/arrow-top.svg" class="arrow-top" id="arrow-top" />
+    </div>
 
 
 </main>
 
+<script>
+    // const token = sessionStorage.getItem("token");
+    // if (!token) {
+    //     location.href = "/login";
+    // }
 
+    // var decoded = jwt_decode(token);
+
+    fetch("/api/player", {
+        //es una promesa
+        // headers: {
+        //     "Content-type": "application/json",
+        //     Authorization: "Bearer " + token
+        // }
+    }).then(response => {
+        if (response.ok) {
+            // if (decoded.isAdmin) {
+            response.json().then(json =>
+                json.map(player => {
+                    const tr = document.createElement("tr");
+                    document.getElementById("table").appendChild(tr);
+                    const td1 = document.createElement("td");
+                    const td2 = document.createElement("td");
+                    const td3 = document.createElement("td");
+                    const td4 = document.createElement("td");
+                    const td5 = document.createElement("td");
+                    const td6 = document.createElement("td");
+                    const td7 = document.createElement("td");
+                    const td8 = document.createElement("td");
+                    const td9 = document.createElement("td");
+                    tr.append(td1, td2, td3, td4, td5, td6, td7, td8, td9);
+                    td1.innerText = player.PlayerId;
+                    td2.innerText = player.name;
+                    td3.innerText = player.surname;
+                    td4.innerText = player.age;
+                    td5.innerText = player.position;
+                    td6.innerText = player.goals;
+                    td7.innerText = player.TeamId;
+                    const btnDelete = document.createElement("img");
+                    td8.appendChild(btnDelete);
+                    btnDelete.setAttribute("src", "/images/other/close.png");
+                    btnDelete.setAttribute("width", "20");
+                    btnDelete.setAttribute("style", "cursor:pointer");
+                    btnDelete.onclick = () => {
+                        fetch("api/player/" + player.PlayerId, {
+                            method: "DELETE"
+                        }).then(() => {
+                            location.href = "/player";
+                        });
+                    };
+                    const btnUpdate = document.createElement("img");
+                    td9.appendChild(btnUpdate);
+                    btnUpdate.setAttribute("src", "/images/other/refresh.png");
+                    btnUpdate.setAttribute("width", "20");
+                    btnUpdate.setAttribute("style", "cursor:pointer");
+                    btnUpdate.onclick = () => {
+                        location.href = "/editPlayer/" + player.PlayerId;
+                    };
+
+                })
+            );
+            // } else {
+            //     response.json().then(json =>
+            //         json.map(user => {
+            //             const tr = document.createElement("tr");
+            //             const tdprofile = document.createElement("td");
+            //             document.getElementById("table").appendChild(tr);
+            //             const td1 = document.createElement("td");
+            //             const td2 = document.createElement("td");
+            //             const td3 = document.createElement("td");
+            //             const td4 = document.createElement("td");
+            //             const td5 = document.createElement("td");
+
+            //             if (decoded.id == user._id) {
+            //                 const btnUpdate = document.createElement("img");
+            //                 td4.appendChild(btnUpdate);
+            //                 btnUpdate.setAttribute("src", "/images/edit-profile.png");
+            //                 btnUpdate.setAttribute("width", "20");
+            //                 btnUpdate.setAttribute("class", "hover-edit");
+            //                 btnUpdate.setAttribute("style", "cursor:pointer");
+            //                 btnUpdate.onclick = () => {
+            //                     location.href = "/editUser/" + user._id;
+            //                 };
+            //                 const btnProfile = document.createElement("img");
+            //                 btnProfile.setAttribute("src", "/images/user.png");
+            //                 btnProfile.setAttribute("width", "20");
+            //                 btnProfile.setAttribute("class", "hover-edit");
+            //                 let linktd1 = document.createElement("a");
+            //                 tdprofile.appendChild(linktd1);
+            //                 linktd1.href = "/users/" + user._id;
+            //                 linktd1.appendChild(btnProfile);
+            //                 tr.append(tdprofile, td4);
+            //             }
+            //             tr.append(tdprofile, td1, td2, td3, td4, td5);
+            //             td1.innerText = user.username;
+            //             td2.innerText = user.email;
+            //             if (user.isAdmin) {
+            //                 const keyImg = document.createElement("img");
+            //                 keyImg.setAttribute("src", "/images/key.png");
+            //                 keyImg.setAttribute("width", "20");
+            //                 td3.appendChild(keyImg);
+            //             }
+            //         })
+            //     );
+            // }
+        }
+    });
+
+
+
+    function sendInfo() {
+        const nameValue = document.getElementById("name").value;
+        const surnameValue = document.getElementById("surname").value;
+        const teamidValue = document.getElementById("teamid").value;
+        const ageValue = document.getElementById("age").value;
+        const goalsValue = document.getElementById("goals").value;
+        const positionValue = document.getElementById("position").value;
+
+        fetch("/api/player", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: nameValue,
+                surname: surnameValue,
+                teamid: teamidValue,
+                age: ageValue,
+                goals: goalsValue,
+                position: positionValue
+            })
+        }).then(response => {
+            if (response.ok) {
+                response.text().then(text => {
+                    location.href = "/player";
+                });
+            }
+        });
+    }
+</script>
 
 <% include _footer %>

@@ -2,78 +2,79 @@
 
 <!-- Main -->
 <main>
-<div class="margen-player">&nbsp</div>
-<div class="container edit-contain">
-    <div class="row bg-light">
-        <div class="col">Editar Jugador</div>
+    <div class="margen-player">&nbsp</div>
+    <div class="container edit-contain">
+        <div class="row bg-light">
+            <div class="col">Editar Jugador</div>
+        </div>
     </div>
-</div>
 
     <div class="container">
         <div class="row">
             <div class="col-7">
-                <form action="/player/update/<%= data.PlayerId %>" method="POST" class="bg-dark p-3">
-                <div class="row">
-                    <div class="col-4">
+                <form method="POST" class="bg-dark p-3">
+                    <div class="row">
+                        <div class="col-4">
                             <div class="form-group d-inline-block">
                                 <label class="text-warning w-25">Nombre:</label>
-                                <input type="text" value="<%= data.name %>" name="name" class="form-control">
+                                <input type="text" name="name" id="name" class="form-control">
                             </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning" >Apellidos:</label>
-                            <input type="text" value="<%= data.surname %>" name="surname" class="form-control">
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">Apellidos:</label>
+                                <input type="text" name="surname" id="surname" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">TeamId:</label>
+                                <input type="text" name="teamid" id="teamid" class="form-control">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning" >TeamId:</label>
-                            <input type="text" value="<%= data.TeamId %>" name="teamid" class="form-control">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">Edad:</label>
+                                <input type="text" name="age" id="age" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group d-inline-block">
+                                <label class="text-warning">Goles:</label>
+                                <input type="text" name="goals" id="goals" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-groupd-inline-block">
+                                <label class="text-warning">Posición:</label>
+                                <input type="text" name="position" id="position" class="form-control" readonly>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning">Edad:</label>
-                            <input type="text" value="<%= data.age %>" name="age"class="form-control">
+                    <div class="row pt-4">
+                        <div class="col">
+                            <div class="form-group w-100 d-inline-block">
+                                <input type="button" value="Enviar" class="btn btn-info mb-1 w-100"
+                                    onclick="sendInfo()">
+                            </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="form-group d-inline-block">
-                            <label class="text-warning">Goles:</label>
-                            <input type="text" value="<%= data.goals %>" name="goals" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="form-groupd-inline-block">
-                            <label class="text-warning">Posición:</label>
-                            <input type="text" value="<%= data.position %>" name="position" id="position" class="form-control" readonly>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pt-4">
-                    <div class="col">
-                        <div class="form-group w-100 d-inline-block">
-                            <input type="submit" value="Enviar" class="btn btn-info mb-1 w-100">
-                        </div>
-                    </div>
-                </div>
                 </form>
             </div>
             <div class="col-5 position-relative position-image">
-                <img src="/images/football-goal-keeper.png" style="top:45%; left:6%;" alt="1">
-                <img src="/images/football-player.png" style="top:8%; left:26%;" alt="2">
-                <img src="/images/football-player.png" style="top:30%; left:18%;" alt="3">
-                <img src="/images/football-player.png" style="top:60%; left:18%;" alt="4">
-                <img src="/images/football-player.png" style="top:83%; left:26%;" alt="5">
-                <img src="/images/football-player.png" style="top:23%; left:50%;" alt="6">
-                <img src="/images/football-player.png" style="top:45%; left:35%;" alt="7">
-                <img src="/images/football-player.png" style="top:65%; left:50%;" alt="8">
-                <img src="/images/football-player.png" style="top:8%; left:70%;" alt="9">
-                <img src="/images/football-player.png" style="top:83%; left:70%;" alt="10">
-                <img src="/images/football-player.png" style="top:45%; left:77%;" alt="11">
+                <img src="/images/other/football-goal-keeper.png" style="top:45%; left:6%;" alt="1">
+                <img src="/images/other/football-player.png" style="top:8%; left:26%;" alt="2">
+                <img src="/images/other/football-player.png" style="top:30%; left:18%;" alt="3">
+                <img src="/images/other/football-player.png" style="top:60%; left:18%;" alt="4">
+                <img src="/images/other/football-player.png" style="top:83%; left:26%;" alt="5">
+                <img src="/images/other/football-player.png" style="top:23%; left:50%;" alt="6">
+                <img src="/images/other/football-player.png" style="top:45%; left:35%;" alt="7">
+                <img src="/images/other/football-player.png" style="top:65%; left:50%;" alt="8">
+                <img src="/images/other/football-player.png" style="top:8%; left:70%;" alt="9">
+                <img src="/images/other/football-player.png" style="top:83%; left:70%;" alt="10">
+                <img src="/images/other/football-player.png" style="top:45%; left:77%;" alt="11">
             </div>
         </div>
     </div>
@@ -86,13 +87,71 @@
         </div>
     </div>
 
-     
-<div class="flotantes">
-    <img src="/images/arrow-top.svg" class="arrow-top" id="arrow-top"/>
-</div>
+
+    <div class="flotantes">
+        <img src="/images/other/arrow-top.svg" class="arrow-top" id="arrow-top" />
+    </div>
 
 
 </main>
+
+<script>
+    const path = location.pathname;
+    let id = path.split(["/"]).slice(-1)[0];
+    console.log("id "+ id);
+
+    fetch("/api/player/" + id, {
+        headers: {
+            "Content-type": "application/json"
+        }
+    }).then(response => {
+        if (response.ok) {
+            response.json().then(player => {
+                document.getElementById("name").value = player[0].name;
+                document.getElementById("surname").value = player[0].surname;
+                document.getElementById("teamid").value = player[0].TeamId;
+                document.getElementById("goals").value = player[0].goals;
+                document.getElementById("position").value = player[0].position;
+                document.getElementById("age").value = player[0].age;
+                console.log(player);
+            });
+        }
+    });
+
+    function sendInfo() {
+        const path = location.pathname;
+        let id = path.split(["/"]).slice(-1)[0];
+        console.log("id "+ id);
+
+        const nameValue = document.getElementById("name").value;
+        const surnameValue = document.getElementById("surname").value;
+        const teamidValue = document.getElementById("teamid").value;
+        const goalsValue = document.getElementById("goals").value;
+        const positionValue = document.getElementById("position").value;
+        const ageValue = document.getElementById("age").value;
+
+        fetch("/api/player/" + id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: nameValue,
+                surname: surnameValue,
+                teamid: teamidValue,
+                goals: goalsValue,
+                position: positionValue,
+                age: ageValue
+            })
+        }).then(response => {
+            if (response.ok) {
+                response.text().then(text => {
+                    location.href = "/player";
+                });
+            }
+        });
+    }
+</script>
 
 
 <% include _footer %>
